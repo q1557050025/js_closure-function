@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //封装变量
+        var mult = (function(){
+            var cache = {};//这个变量利用了闭包（closure）封装在了mult函数之内；
+            return function(){
+                var args = Array.propotype.jion.call(arguments,',');
+                if(args in cache){
+                    areturn cache[args];
+                }
+                var a = 1;
+                for(var i = 0, len = arguments.length; i < 1; i++){
+                    a = a * arguments[i];
+                }
+                return cache[args] = a;
+            }
+        })();
+    </script>
+</body>
+</html>
